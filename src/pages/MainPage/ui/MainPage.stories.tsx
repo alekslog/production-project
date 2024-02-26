@@ -1,8 +1,7 @@
-
 import type { Meta, StoryObj } from '@storybook/react';
-import MainPage from './MainPage';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import MainPage from './MainPage';
 
 const meta: Meta<typeof MainPage> = {
     title: 'pages/MainPage',
@@ -16,8 +15,8 @@ const meta: Meta<typeof MainPage> = {
         backgroundColor: { control: 'color' },
     },
     args: {
-        to: '/'
-    }
+        to: '/',
+    },
 };
 
 export default meta;
@@ -30,4 +29,4 @@ export const Normal: Story = {
 export const Dark: Story = {
     args: {},
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
