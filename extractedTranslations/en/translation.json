@@ -1,9 +1,10 @@
 {
-    "throw error": "throw error",
-    "Главная страница": "Main page",
-    "О сайте": "About",
-    "Обновить страницу": "Refresh",
-    "Произошла непредвиденная ошибка": "unexpected error",
-    "Страница не найдена": "page not found",
-    "Язык": "Language"
+  "throw error": "throw error",
+  "Главная": "Главная",
+  "Главная страница": "Main page",
+  "О сайте": "About",
+  "Обновить страницу": "Refresh",
+  "Произошла непредвиденная ошибка": "unexpected error",
+  "Страница не найдена": "page not found",
+  "Язык": "Language"
 }
