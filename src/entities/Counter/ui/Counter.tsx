@@ -6,8 +6,8 @@ import { counterActions } from '../model/slice/counterSlice';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 
 export const Counter = () => {
-    const dispatch = useDispatch();
-    const counterValue = useSelector(getCounterValue);
+    const dispatch = useDispatch(); // вызов диспетчера
+    const counterValue = useSelector(getCounterValue); // вызов селектора стейта redux-toolkit
     const { t } = useTranslation();
 
     const increment = () => {
