@@ -4,16 +4,15 @@ import { Input } from 'shared/ui/Input/Input';
 
 const MainPage = () => {
     const { t } = useTranslation();
-    const [value, setvalue] = useState('');
+    const [value, setValue] = useState('');
 
-    const onChange = (val:string) => {
-        setvalue(val);
+    const onChange = (val: string) => {
+        setValue(val);
     };
 
     return (
         <div>
             {t('Главная страница')}
-
         </div>
     );
 };

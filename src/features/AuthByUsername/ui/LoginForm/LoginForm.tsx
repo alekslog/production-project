@@ -5,11 +5,12 @@ import { Input } from 'shared/ui/Input/Input';
 import cls from './LoginForm.module.scss';
 
 interface LoginFormProps {
-    className?: string
+    className?: string;
 }
 
 export const LoginForm = ({ className }: LoginFormProps) => {
     const { t } = useTranslation();
+
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Input
@@ -23,7 +24,9 @@ export const LoginForm = ({ className }: LoginFormProps) => {
                 className={cls.input}
                 placeholder={t('Введите пароль')}
             />
-            <Button className={cls.loginBtn}>
+            <Button
+                className={cls.loginBtn}
+            >
                 {t('Войти')}
             </Button>
         </div>
