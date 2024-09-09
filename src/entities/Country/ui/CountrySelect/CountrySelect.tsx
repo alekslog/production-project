@@ -8,7 +8,7 @@ interface CountrySelectProps {
     className?: string;
     value?: Country;
     onChange?: (value: Country) => void;
-    readonly?: boolean
+    readonly?: boolean;
 }
 
 const options = [
@@ -17,7 +17,6 @@ const options = [
     { value: Country.Belarus, content: Country.Belarus },
     { value: Country.Kazakhstan, content: Country.Kazakhstan },
     { value: Country.Ukraine, content: Country.Ukraine },
-
 ];
 
 export const CountrySelect = memo(({

@@ -7,8 +7,8 @@ import { Currency } from '../../model/types/currency';
 interface CurrencySelectProps {
     className?: string;
     value?: Currency;
-    onChange?:(value:Currency) => void;
-    readonly?: boolean
+    onChange?: (value: Currency) => void;
+    readonly?: boolean;
 }
 
 const options = [

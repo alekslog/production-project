@@ -5,7 +5,7 @@ import cls from './Avatar.module.scss';
 interface AvatarProps {
     className?: string;
     src?: string;
-    size?:number;
+    size?: number;
     alt?: string;
 }
 
@@ -24,7 +24,7 @@ export const Avatar = ({
             src={src}
             alt={alt}
             style={styles}
-            className={classNames(cls.Avatar, {}, [className])}
+            className={classNames(cls.Avatar, mods, [className])}
         />
     );
 };

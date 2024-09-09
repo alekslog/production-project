@@ -10,10 +10,10 @@ export interface SelectOption {
 interface SelectProps {
     className?: string;
     label?: string;
-    options? : SelectOption[];
+    options?: SelectOption[];
     value?: string;
     onChange?: (value: string) => void;
-    readonly?: boolean
+    readonly?: boolean;
 }
 
 export const Select = memo((props: SelectProps) => {
@@ -32,28 +32,23 @@ export const Select = memo((props: SelectProps) => {
         }
     };
 
-    const optionList = useMemo(
-        () => options?.map((opt) => (
-            <option
-                className={cls.option}
-                value={opt.value}
-                key={opt.value}
-            >
-                {opt.content}
-            </option>
-        )),
-        [options],
-    );
+    const optionsList = useMemo(() => options?.map((opt) => (
+        <option
+            className={cls.option}
+            value={opt.value}
+            key={opt.value}
+        >
+            {opt.content}
+        </option>
+    )), [options]);
 
-    const mods: Mods = {
-
-    };
+    const mods: Mods = {};
 
     return (
         <div className={classNames(cls.Wrapper, mods, [className])}>
             {label && (
                 <span className={cls.label}>
-                    {`${label}>` }
+                    {`${label}>`}
                 </span>
             )}
             <select
@@ -62,7 +57,7 @@ export const Select = memo((props: SelectProps) => {
                 value={value}
                 onChange={onChangeHandler}
             >
-                {optionList}
+                {optionsList}
             </select>
         </div>
     );

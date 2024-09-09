@@ -1,4 +1,4 @@
-import { Mods, classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import cls from './Text.module.scss';
 
@@ -18,7 +18,7 @@ interface TextProps {
     title?: string;
     text?: string;
     theme?: TextTheme;
-    align?: TextAlign
+    align?: TextAlign;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -27,7 +27,7 @@ export const Text = memo((props: TextProps) => {
         text,
         title,
         theme = TextTheme.PRIMARY,
-        align = TextAlign.CENTER,
+        align = TextAlign.LEFT,
     } = props;
 
     const mods: Mods = {
